@@ -22,7 +22,7 @@
         <div class="button-group">
             <el-row :gutter="16" >
                 <el-col :span="8">
-                    <el-button class="action-btn" size="large" :icon="GithubIcon" tag="a" href="https://github.com/noob-xiaoyu" target="_blank" rel="noopener noreferrer">GitHub</el-button>
+                    <el-button class="action-btn" size="large" :icon="GithubIcon" tag="a" href="https://github.com/noob-xiaoyu" target="_blank" rel="noopener noreferrer"  style="text-decoration: none">GitHub</el-button>
                 </el-col>
 
                 <el-col :span="8">

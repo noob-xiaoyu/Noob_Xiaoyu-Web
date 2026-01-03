@@ -204,6 +204,9 @@ html { scrollbar-width: none; -ms-overflow-style: none; }
   display: block;
   margin-bottom: 16px;
 }
+.project-card-link{
+  background: transparent;
+}
 
 .project-card {
   background-color: var(--list-item-bg-color); 
@@ -249,6 +252,7 @@ html { scrollbar-width: none; -ms-overflow-style: none; }
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--main-text-color);
 }
 
 .custom-svg-icon {
@@ -366,4 +370,6 @@ html { scrollbar-width: none; -ms-overflow-style: none; }
   .home-container .user-info {
     margin: 0 0 0 20px;
   }
+  html::-webkit-scrollbar { display: none; }
+  html { scrollbar-width: none; -ms-overflow-style: none; }
 }

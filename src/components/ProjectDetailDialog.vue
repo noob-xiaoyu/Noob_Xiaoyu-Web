@@ -29,10 +29,10 @@ defineProps({
         </div>
         <h3 v-if="project.links">相关链接</h3>
         <div class="project-links">
-          <el-button v-if="project.links.github" tag="a" :href="project.links.github" target="_blank" class="action-btn" :icon="GithubIcon">
+          <el-button v-if="project.links.github" tag="a" :href="project.links.github" target="_blank" class="action-btn" :icon="GithubIcon" style="text-decoration: none">
             GitHub
           </el-button>
-          <el-button v-if="project.links.live" tag="a" :href="project.links.live" target="_blank" type="primary" class="action-btn" style="margin-left: 10px;" plain>
+          <el-button v-if="project.links.live" tag="a" :href="project.links.live" target="_blank" type="primary" class="action-btn" style="margin-left: 10px;text-decoration: none" plain>
             在线预览
           </el-button>
         </div>
@@ -40,3 +40,60 @@ defineProps({
     </el-row>
   </div>
 </template>
+
+<style scoped>
+/* 基础样式 */
+.project-carousel {
+  border-radius: 8px;
+  margin-bottom: 20px;
+  background-color: rgba(0,0,0,0.2);
+  overflow: hidden; /* 防止内容溢出导致滚动条 */
+}
+
+.long-description {
+  line-height: 1.8;
+  color: var(--secondary-text-color);
+  max-height: 400px; /* 限制最大高度 */
+  overflow-y: auto; /* 允许垂直滚动但隐藏滚动条 */
+  scrollbar-width: none; /* Firefox隐藏滚动条 */
+  -ms-overflow-style: none; /* IE/Edge隐藏滚动条 */
+}
+
+.long-description::-webkit-scrollbar {
+  display: none; /* Chrome/Safari隐藏滚动条 */
+}
+
+h3 {
+  color: var(--main-text-color);
+  margin-top: 20px;
+  margin-bottom: 15px;
+  border-left: 4px solid #409eff;
+  padding-left: 10px;
+}
+
+.tech-stack, .project-links {
+  margin-bottom: 20px;
+}
+
+/* 如果需要应用于特定容器 */
+.no-scroll-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* 完全隐藏滚动条 */
+}
+
+/* 或者使用更精细的控制 */
+.scrollable-content {
+  width: 100%;
+  height: calc(100vh - 100px); /* 视口高度减去头部高度 */
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent; /* 隐藏滚动条但保留功能 */
+}
+
+/* 使用clip来裁剪内容，不显示滚动条 */
+.clipped-container {
+  overflow: clip;
+  contain: content;
+}
+</style>

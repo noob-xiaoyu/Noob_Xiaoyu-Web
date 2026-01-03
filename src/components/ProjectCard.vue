@@ -24,7 +24,7 @@ function handleClick() {
       <div class="project-card-content">
         <div class="icon-container">
           <component v-if="iconComponent" :is="iconComponent" class="custom-svg-icon" />
-          <el-avatar v-else :size="52" :src="icon" shape="square" />
+          <el-avatar v-else :size="52" :src="icon" shape="square" style="background-color: transparent !important;"/>
         </div>
         <div class="project-details">
           <h3>{{ title }}</h3>
