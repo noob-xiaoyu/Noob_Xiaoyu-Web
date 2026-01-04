@@ -1,6 +1,4 @@
-<!-- eslint-disable no-unused-vars -->
 <script setup>
-import { Markdown } from 'vue3-markdown-it'
 import GithubIcon from '@/components/icons/GithubIcon.vue'
 import 'github-markdown-css/github-markdown-light.css'
 
@@ -22,9 +20,6 @@ defineProps({
           </el-carousel-item>
         </el-carousel>
         <p class="long-description">{{ project.longDescription }}</p>
-        <!-- <div class="long-description">
-          <Markdown class="markdown-body" :source="project.longDescription" />
-        </div> -->
       </el-col>
       <el-col :xs="24" :md="10">
         <h3>技术栈</h3>
