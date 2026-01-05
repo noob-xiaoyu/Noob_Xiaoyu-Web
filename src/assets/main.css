@@ -88,14 +88,14 @@ html { scrollbar-width: none; -ms-overflow-style: none; }
 .content-overlay { scrollbar-width: none; -ms-overflow-style: none; }
 
 .el-divider {
-  /* 
+  /*
     方法一 (最佳实践): 覆盖 Element Plus 的颜色变量。
     我们将 --el-border-color 的值设置为我们自己的主题变量 --border-color。
     这样，当主题切换时，分割线的颜色也会自动从深色变为浅色。
   */
   --el-border-color: var(--border-color);
 
-  /* 
+  /*
     方法二 (直接覆盖): 调整厚度、样式和边距。
     你可以根据需要取消下面这些行的注释并修改它们的值。
   */
@@ -185,6 +185,7 @@ html { scrollbar-width: none; -ms-overflow-style: none; }
   padding: 60px 20px;
   min-height: 100vh;
   box-sizing: border-box;
+  padding: 12px;
 }
 
 .projects-card, .Download-card {
@@ -209,7 +210,7 @@ html { scrollbar-width: none; -ms-overflow-style: none; }
 }
 
 .project-card {
-  background-color: var(--list-item-bg-color); 
+  background-color: var(--list-item-bg-color);
   border-color: var(--border-color);
   border-radius: 16px;
   transition: background-color 0.25s ease-in-out, transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
@@ -317,7 +318,7 @@ html { scrollbar-width: none; -ms-overflow-style: none; }
   color: var(--footer-text-color);
   font-size: 12px;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-  pointer-events: none; 
+  pointer-events: none;
 }
 
 .theme-toggle {

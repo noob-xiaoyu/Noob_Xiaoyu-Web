@@ -8,36 +8,25 @@ const props = defineProps({
   iconComponent: Object,
   title: String,
   description: String,
-  // 'to' prop 不再需要了
+  to: [String, Object]
 })
-
-// 2. 点击时调用这个函数
-function handleClick() {
-  // 3. 发出 'viewDetails' 事件
-  emit('viewDetails')
-}
 </script>
 
 <template>
-  <!-- 1. 移除 router-link，换成普通的 div，并添加 click 事件监听 -->
-  <div class="project-card-link" @click="handleClick">
-    <el-card class="project-card" shadow="hover">
-      <div class="project-card-content">
-        <div class="icon-container">
-          <component v-if="iconComponent" :is="iconComponent" class="custom-svg-icon" />
-          <el-avatar
-            v-else
-            :size="52"
-            :src="icon"
-            shape="square"
-            style="background-color: transparent !important"
-          />
+  <router-link :to="to" style="display: block; text-decoration: none">
+    <div class="project-card-link" @click="handleClick">
+      <el-card class="project-card" shadow="hover">
+        <div class="project-card-content">
+          <div class="icon-container">
+            <component v-if="iconComponent" :is="iconComponent" class="custom-svg-icon" />
+            <el-avatar v-else :size="52" :src="icon" shape="square" style="background-color: transparent !important"/>
+          </div>
+          <div class="project-details">
+            <h3>{{ title }}</h3>
+            <p>{{ description }}</p>
+          </div>
         </div>
-        <div class="project-details">
-          <h3>{{ title }}</h3>
-          <p>{{ description }}</p>
-        </div>
-      </div>
-    </el-card>
-  </div>
+      </el-card>
+    </div>
+  </router-link>
 </template>

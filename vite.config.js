@@ -9,7 +9,7 @@ export default defineConfig({
   base: '/Noob_Xiaoyu-Web/',
   server: {
     host: '0.0.0.0', // 监听所有地址，包括公网
-    port: 80      // 你可以自定义端口
+    port: 80     // 你可以自定义端口
   },
   plugins: [
     vue(),

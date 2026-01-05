@@ -24,6 +24,22 @@ const router = createRouter({
       name: '/download',
       component: () => import('../views/downloadView.vue')
     },
+
+    {
+      path: '/projects/personal-website',
+      name: '/personal-website',
+      component: () => import('../views/projects/personal-website.vue')
+    },
+    {
+      path: '/projects/ImGui-menu',
+      name: '/ImGui-menu',
+      component: () => import('../views/projects/ImGui-menu.vue')
+    },
+    {
+      path: '/projects/launcher',
+      name: '/launcher',
+      component: () => import('../views/projects/launcher.vue')
+    },
   ]
 })
 

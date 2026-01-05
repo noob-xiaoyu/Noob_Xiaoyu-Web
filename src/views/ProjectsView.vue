@@ -1,12 +1,13 @@
 <script setup>
 import { ref } from 'vue'
 import ProjectCard from '@/components/ProjectCard.vue'
-import ProjectDetailDialog from '@/components/ProjectDetailDialog.vue' // 我们将创建这个新组件
 import backIcon from '@/components/icons/back.vue'
 import bIcon from '@/assets/image/icon/svg/b.svg'
 import launcherIcon from '@/assets/image/icon/svg/launcher.svg'
 import yt_dlp_gui_Icon from '@/assets/image/icon/dlp.ico'
 import SteamAccountManager_Icon from '@/assets/image/icon/SteamAccountManager.ico'
+
+import personalwebsite from '@/views/projects/personal-website.vue'
 // 1. 完整项目数据
 const projectList = ref([
   {
@@ -14,14 +15,7 @@ const projectList = ref([
     icon: 'https://cdn.jsdelivr.net/gh/noob-xiaoyu/image@main/hoshino.jpg',
     title: '个人网站',
     shortDescription: '就是本网站，使用 Vue 3 + Element Plus 构建。',
-    longDescription:
-      '这是一个完全响应式的个人主页和作品集网站。前端采用 Vue 3、Vite 和 Element Plus 构建，实现了动态视频背景、黑白主题切换、流畅的路由过渡动画等功能。所有项目数据都通过模块化的方式进行管理，易于扩展和维护。',
-    images: [],
-    techStack: ['Vue 3', 'Vite', 'Element Plus', 'Vue Router'],
-    links: {
-      github: 'https://github.com/noob-xiaoyu/Noob_Xiaoyu-Web',
-      live: '/',
-    },
+    to: 'projects/personal-website',
   },
   {
     id: 'Imgui-menu',
@@ -29,26 +23,18 @@ const projectList = ref([
     title: 'Imgui-menu',
     shortDescription:
       '这是一款基于 ImGui 的现代化悬浮菜单框架，它集成了辉光、鼠标拖尾等丰富视觉特效和计时器等实用工具，并提供强大的主题与配置系统。',
-    longDescription:
-      '这是什么?这是一个现代化的、半透明的悬浮菜单。它的主要特点是: 高度可定制: 你可以随心所欲地改变它的外观，从颜色主题到每个按钮的圆角大小，都可以调整并保存。 核心功能一览 1. 一键显示/隐藏 默认情况下，按下键盘上的 `Insert` 键，就可以打开或关闭这个菜单。这个快捷键也可以在设置里更换成你喜欢的任何按键。 2. 丰富的视觉效果 菜单辉光: 让整个菜单窗口的边缘散发出柔和的光晕，颜色和光晕的厚度都可以自定义。 鼠标拖尾: 当你在菜单上移动鼠标时，会留下一道平滑、多彩的轨迹，科技感十足。 背景模糊: (此功能为占位实现) 菜单出现时，其背后的内容会变得模糊，让你更专注于菜单本身。 3. 强大的主题系统 内置主题: 程序内置了多种精心设计的主题，比如优雅的“樱花粉”亮色主题和酷炫的“霓虹粉”暗色主题，一键切换。 实时样式编辑器: 你可以打开一个“样式编辑器”窗口，像 Photoshop 一样实时调整菜单的每一个视觉细节，包括颜色、边框、圆角、间距等。 保存和加载: 当你调整出一个满意的外观后，可以将其保存为一个主题文件。之后，你可以随时加载这个文件，或者分享给朋友。 4. 实用的内置工具 计时器: 菜单里集成了一个精确到毫秒的秒表。你可以用它来计时、测试任务耗时等，非常方便。 帧率显示 (FPS): 在菜单的左下角会实时显示当前的运行帧率，让你了解程序的性能表现。 5. 配置管理系统 你可以在菜单中对各种功能（例如视觉效果、计时器状态等）进行设置。这个系统允许你将当前所有的设置保存为一个独立的配置文件。你可以创建多个不同的配置文件，比如“游戏配置”、“工作配置”等，并根据需要随时加载它们，无需每次都重新调整。 如何使用这个菜单？ 1. 启动: 运行程序后，你可能看不到任何东西，因为它是一个透明的覆盖层。 2. 打开菜单: 按下 `Insert` 键，菜单就会华丽地出现在屏幕上。 3. 浏览: 菜单左侧是导航栏，上面有 "Visuals"（视觉效果）、"Time"（时间工具）、"Settings"（设置）等选项卡。点击不同的选项卡，右侧的内容区域就会切换到对应的功能页面。 4. 进行设置: 在 "Visuals" 页面，你可以找到开关来启用/禁用“菜单辉光”和“鼠标拖尾”，并调整它们的颜色、大小等参数。在 "Time" 页面，你可以控制计时器的开始、暂停和重置。在 "Settings" 页面，你可以切换整体主题、锁定菜单大小（防止误触改变）、修改呼出菜单的快捷键，以及安全退出程序。在 "Configs" 页面，你可以管理你的个人设置文件。 5. 关闭菜单: 再次按下 `Insert` 键，菜单就会消失，但程序仍在后台运行，等待下一次召唤。 6. 完全退出: 如果想彻底关闭程序，请进入 "Settings" 页面，点击“退出”按钮。 总而言之，这不仅仅是一个简单的设置窗口，更是一个集美观、实用和高度个性化于一体的强大UI框架，为你提供了流畅、现代的交互体验。两个字没用',
-    images: [],
-    techStack: ['C++', 'ImGui'],
-    links: {
-      github: 'https://github.com/noob-xiaoyu/Imgui-menu',
-    },
+    to: 'projects/Imgui-menu',
   },
   {
     id: 'launcher for napcat&yunzai',
     icon: launcherIcon,
     title: 'launcher for napcat&yunzai',
     shortDescription: '这是一个在 Windows 电脑上，让你能一键启动和运行 QQ 机器人的“傻瓜式”工具。',
-    longDescription:
-      '这是一个在 Windows 电脑上，让你能一键启动和运行 QQ 机器人的“傻瓜式”工具。 核心组件解析： 1. Yunzai-Bot (云崽 Bot): 这是一个非常受欢迎的、开源的 QQ 聊天机器人框架，最初主要为游戏《原神》的玩家社群设计。 功能强大且高度可扩展，用户可以通过安装各种插件来增加新功能，如游戏数据查询、群管理、娱乐互动等。 它本身支持跨平台运行，但在 Windows 上进行环境配置对新手来说可能较为复杂。 2. NapCatQQ (猫猫) 这是一个现代化的、基于 NTQQ 的机器人协议端实现。简单来说，它负责让机器人能够与 QQ 服务器进行通信，收发消息。 它的特点是内存占用低、开箱即用，并且支持多种部署方式。 它遵循 OneBot 协议标准，这是一个广泛应用的机器人开放标准，使得 Yunzai-Bot 等多种框架可以通过它来接入 QQ。 核心组件解析： 一键启动与集成：它将 NapCatQQ 和 Yunzai-Bot 的启动过程集成到一个终端界面中，用户无需手动在命令行中执行复杂的指令。 简化配置：对于不熟悉 Node.js、Git 等环境配置的 Windows 用户，这个启动器能够自动化处理许多繁琐的步骤，降低了使用门槛。 方便管理：提供了一个可视化的界面来管理机器人的运行状态，如启动、停止、重启等。 专为 Windows 优化：解决了在 Windows 环境下部署 Yunzai-Bot 时可能遇到的一些常见问题，让整个体验更加顺畅。 总结来说，如果你是一名 Windows 用户，并且想使用功能强大的 Yunzai-Bot 来搭建自己的 QQ 机器人，那么 windows-launcher-napcat-yunzai 这个项目将是一个极佳的工具。它为你免去了复杂的后台配置过程，让你能更专注于机器人功能的探索和使用。',
-    images: [],
     techStack: ['C++'],
     links: {
       github: 'https://github.com/noob-xiaoyu/windows-launcher-napcat-yunzai',
     },
+    to: 'projects/launcher',
   },
   {
     id: 'yt-dlp-gui',
@@ -119,24 +105,9 @@ const projectList = ref([
   //   }
   // },
 ])
-
-// 2. 用于控制弹窗的状态
-const selectedProject = ref(null) // 存储当前被选中的项目
-const dialogVisible = ref(false) // 控制弹窗是否显示
-
 // 3. 点击卡片时触发的函数
 function showProjectDetails(project) {
   selectedProject.value = project // 记录被点击的项目
-  dialogVisible.value = true // 打开弹窗
-}
-
-// 4. 关闭弹窗时触发的函数
-function handleClose() {
-  dialogVisible.value = false
-  // 动画结束后再清空数据，防止内容闪烁
-  setTimeout(() => {
-    selectedProject.value = null
-  }, 300)
 }
 </script>
 
@@ -159,23 +130,10 @@ function handleClose() {
           :iconComponent="project.iconComponent"
           :title="project.title"
           :description="project.shortDescription"
+          :to="project.to"
           @viewDetails="showProjectDetails(project)"
         />
       </div>
     </div>
-
-    <!-- 这是我们的详情弹窗 -->
-    <el-dialog
-      v-model="dialogVisible"
-      :title="selectedProject ? selectedProject.title : ''"
-      width="80%"
-      top="5vh"
-      class="project-detail-dialog"
-      :before-close="handleClose"
-      append-to-body
-      destroy-on-close
-    >
-      <ProjectDetailDialog :project="selectedProject" />
-    </el-dialog>
   </div>
 </template>
