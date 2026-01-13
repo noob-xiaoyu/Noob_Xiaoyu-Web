@@ -5,6 +5,25 @@ import { Sunny, Moon } from '@element-plus/icons-vue' // 1. 导入图标
 import { useTheme } from '@/composables/useTheme.js';   // 2. 导入 useTheme
 import Waifu from '@/components/Waifu.vue' // 导入看板娘组件
 
+// 导入视频文件
+import video1 from '@/assets/video/a1.webm'
+import video2 from '@/assets/video/a2.webm'
+import video3 from '@/assets/video/a3.webm'
+import video4 from '@/assets/video/a4.webm'
+import video5 from '@/assets/video/a5.webm'
+import video6 from '@/assets/video/a6.webm'
+import video7 from '@/assets/video/a7.webm'
+import video8 from '@/assets/video/a8.webm'
+import video9 from '@/assets/video/a9.webm'
+import video10 from '@/assets/video/a10.webm'
+import video11 from '@/assets/video/a11.webm'
+
+// 视频文件数组
+const videos = [
+  video1, video2, video3, video4, video5,
+  video6, video7, video8, video9, video10, video11
+]
+
 // --- 视频背景逻辑 (优化) ---
 const videoUrl = ref('');
 const videoLoading = ref(true);
@@ -66,10 +85,9 @@ const setRandomVideo = async () => {
 
   try {
     // 生成随机视频索引
-    const videoIndex = Math.floor(Math.random() * 11) + 1;
-    // 使用 public/video/ 目录中的视频文件
-    // 使用相对路径，确保在任何环境下都能正确加载
-    const videoPath = `video/a${videoIndex}.webm`;
+    const videoIndex = Math.floor(Math.random() * videos.length);
+    // 使用导入的视频文件
+    const videoPath = videos[videoIndex];
 
     console.log('尝试加载视频:', videoPath);
 
@@ -85,10 +103,9 @@ const setRandomVideo = async () => {
   } catch (error) {
     console.error('视频加载失败:', error);
     // 加载失败时尝试其他视频
-      try {
-        const fallbackIndex = Math.floor(Math.random() * 11) + 1;
-        // 使用相对路径，确保在任何环境下都能正确加载
-        const fallbackPath = `video/a${fallbackIndex}.webm`;
+    try {
+      const fallbackIndex = Math.floor(Math.random() * videos.length);
+      const fallbackPath = videos[fallbackIndex];
       console.log('尝试加载备用视频:', fallbackPath);
       videoUrl.value = `${fallbackPath}?t=${Date.now()}`;
 
