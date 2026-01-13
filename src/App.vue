@@ -68,7 +68,9 @@ const setRandomVideo = async () => {
     // 生成随机视频索引
     const videoIndex = Math.floor(Math.random() * 11) + 1;
     // 使用 public/video/ 目录中的视频文件
-    const videoPath = `/video/a${videoIndex}.webm`;
+    // 本地开发使用 /video/ 路径，GitHub Pages 使用 /Noob_Xiaoyu-Web/video/ 路径
+    const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+    const videoPath = isLocal ? `/video/a${videoIndex}.webm` : `/Noob_Xiaoyu-Web/video/a${videoIndex}.webm`;
 
     console.log('尝试加载视频:', videoPath);
 
@@ -84,9 +86,11 @@ const setRandomVideo = async () => {
   } catch (error) {
     console.error('视频加载失败:', error);
     // 加载失败时尝试其他视频
-    try {
-      const fallbackIndex = Math.floor(Math.random() * 11) + 1;
-      const fallbackPath = `/video/a${fallbackIndex}.webm`;
+      try {
+        const fallbackIndex = Math.floor(Math.random() * 11) + 1;
+        // 本地开发使用 /video/ 路径，GitHub Pages 使用 /Noob_Xiaoyu-Web/video/ 路径
+        const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+        const fallbackPath = isLocal ? `/video/a${fallbackIndex}.webm` : `/Noob_Xiaoyu-Web/video/a${fallbackIndex}.webm`;
       console.log('尝试加载备用视频:', fallbackPath);
       videoUrl.value = `${fallbackPath}?t=${Date.now()}`;
 
