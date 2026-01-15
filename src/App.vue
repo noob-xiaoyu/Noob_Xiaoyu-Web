@@ -176,13 +176,7 @@ watch(theme, (newTheme, oldTheme) => {
   </div>
 
   <!-- 4. 将主题切换按钮添加到这里 -->
-  <el-button
-    class="theme-toggle"
-    :icon="theme === 'light' ? Moon : Sunny"
-    @click="toggleTheme"
-    circle
-    size="large"
-  />
+  <el-button class="theme-toggle" :icon="theme === 'light' ? Moon : Sunny" @click="toggleTheme" circle size="large"/>
 
   <div class="global-footer">
     © 2025 Noob_Xiaoyu. All Rights Reserved.

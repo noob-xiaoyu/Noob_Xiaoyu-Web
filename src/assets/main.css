@@ -2,47 +2,97 @@
    1. 主题变量定义
    ========================================================================== */
 body.light-theme {
+  /* 主色调 - 浅蓝色系 */
+  --primary-color: #7eb6fb;
+  --primary-hover-color: #3b82f6;
+  --primary-light-color: #93c5fd;
+  --primary-gradient: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+  --primary-gradient-hover: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+
+  /* 辅助色 - 浅粉色系 */
+  --secondary-color: #f4b7de;
+  --secondary-hover-color: #ec4899;
+  --secondary-light-color: #fbcfe8;
+  --secondary-gradient: linear-gradient(135deg, #f472b6 0%, #ec4899 100%);
+
+  --box-shadow-color: #f8bde3;
+
+  /* 功能性色彩 */
+  --success-color: #10b981;
+  --success-light-color: #34d399;
+  --error-color: #ef4444;
+  --error-light-color: #fca5a5;
+  --warning-color: #f59e0b;
+  --info-color: #3b82f6;
+
+  /* 中性色 */
   --card-bg-color: rgba(255, 255, 255, 0.6);
-  --main-text-color: #1a1a1a;
-  --secondary-text-color: #4d4d4d;
-  --footer-text-color: #888;
-  --button-bg-color: rgba(240, 240, 240, 0.4);
-  --button-hover-bg-color: rgba(255, 255, 255, 0.9);
-  --border-color: rgba(0, 0, 0, 0.2);
-  --button-text-color: #333;
+  --card-bg-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.6) 100%);
+  --main-text-color: #111827;
+  --secondary-text-color: #6b7280;
+  --footer-text-color: #9ca3af;
+  --button-bg-color: rgba(249, 250, 251, 0.8);
+  --button-hover-bg-color: rgba(243, 244, 246, 0.95);
+  --border-color: rgba(229, 231, 235, 0.8);
+  --button-text-color: #374151;
   --list-item-bg-color: rgba(255, 255, 255, 0.5);
   --list-item-hover-bg-color: rgba(255, 255, 255, 0.7);
-  --toggle-bg-color: rgba(245, 245, 245, 0.9);
-  --toggle-icon-color: #333;
-  --toggle-border-color: rgba(0, 0, 0, 0.1);
-  --toggle-hover-bg-color: rgba(255, 255, 255, 1);
-  --toggle-hover-border-color: rgba(0, 0, 0, 0.2);
+  --toggle-bg-color: rgba(249, 250, 251, 0.9);
+  --toggle-icon-color: #374151;
+  --toggle-border-color: rgba(229, 231, 235, 0.8);
+  --toggle-hover-bg-color: rgba(243, 244, 246, 1);
+  --toggle-hover-border-color: rgba(209, 213, 219, 0.8);
   --dialog-bg-color: rgba(255, 255, 255, 0.7);
   --dialog-header-text-color: var(--main-text-color);
-  --dialog-border-color: rgba(0, 0, 0, 0.1);
-  --dialog-box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+  --dialog-border-color: rgba(229, 231, 235, 0.8);
+  --dialog-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 body.dark-theme {
-  --card-bg-color: rgba(40, 40, 40, 0.6);
-  --main-text-color: #ffffff;
-  --secondary-text-color: #dcdcdc;
-  --footer-text-color: #aaa;
-  --button-bg-color: rgba(60, 60, 60, 0.4);
-  --button-hover-bg-color: rgba(80, 80, 80, 0.9);
-  --border-color: rgba(255, 255, 255, 0.2);
-  --button-text-color: #ffffff;
-  --list-item-bg-color: rgba(50, 50, 50, 0.5);
-  --list-item-hover-bg-color: rgba(70, 70, 70, 0.7);
-  --toggle-bg-color: rgba(60, 60, 60, 0.9);
-  --toggle-icon-color: #fff;
-  --toggle-border-color: rgba(255, 255, 255, 0.2);
-  --toggle-hover-bg-color: rgba(80, 80, 80, 1);
-  --toggle-hover-border-color: rgba(255, 255, 255, 0.4);
-  --dialog-bg-color: rgba(30, 30, 30, 0.7);
+  /* 主色调 - 浅蓝色系 */
+  --primary-color: #60a5fa;
+  --primary-hover-color: #3b82f6;
+  --primary-light-color: #93c5fd;
+  --primary-gradient: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+  --primary-gradient-hover: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+
+  /* 辅助色 - 浅粉色系 */
+  --secondary-color: #f9b4e0;
+  --secondary-hover-color: #ec4899;
+  --secondary-light-color: #fbcfe8;
+  --secondary-gradient: linear-gradient(135deg, #f472b6 0%, #ec4899 100%);
+
+  --box-shadow-color: #f8bde3;
+
+  /* 功能性色彩 */
+  --success-color: #34d399;
+  --success-light-color: #6ee7b7;
+  --error-color: #f87171;
+  --error-light-color: #fca5a5;
+  --warning-color: #fbbf24;
+  --info-color: #60a5fa;
+
+  /* 中性色 */
+  --card-bg-color: rgba(31, 41, 55, 0.6);
+  --card-bg-gradient: linear-gradient(180deg, rgba(31, 41, 55, 0.8) 0%, rgba(31, 41, 55, 0.6) 100%);
+  --main-text-color: #f9fafb;
+  --secondary-text-color: #d1d5db;
+  --footer-text-color: #9ca3af;
+  --button-bg-color: rgba(55, 65, 81, 0.8);
+  --button-hover-bg-color: rgba(75, 85, 99, 0.95);
+  --border-color: rgba(107, 114, 128, 0.8);
+  --button-text-color: #f3f4f6;
+  --list-item-bg-color: rgba(31, 41, 55, 0.5);
+  --list-item-hover-bg-color: rgba(55, 65, 81, 0.7);
+  --toggle-bg-color: rgba(55, 65, 81, 0.9);
+  --toggle-icon-color: #f3f4f6;
+  --toggle-border-color: rgba(107, 114, 128, 0.8);
+  --toggle-hover-bg-color: rgba(75, 85, 99, 1);
+  --toggle-hover-border-color: rgba(156, 163, 175, 0.8);
+  --dialog-bg-color: rgba(31, 41, 55, 0.7);
   --dialog-header-text-color: var(--main-text-color);
-  --dialog-border-color: rgba(255, 255, 255, 0.2);
-  --dialog-box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  --dialog-border-color: rgba(107, 114, 128, 0.8);
+  --dialog-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -188,34 +238,68 @@ html { scrollbar-width: none; -ms-overflow-style: none; }
 .info-card {
   width: 90%;
   padding: 40px 30px;
-  border-radius: 10px;
+  border-radius: 16px;
   text-align: center;
   color: var(--main-text-color);
-  background-color: var(--card-bg-color);
+  background: var(--card-bg-gradient);
   border: 1px solid var(--border-color);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.info-card:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  transform: translateY(-2px);
 }
 
 /* --- 通用动作按钮 --- */
 .action-btn {
   width: 100%;
   font-size: 1em;
-  background-color: var(--button-bg-color) !important;
+  background: var(--button-bg-color) !important;
   border: 1px solid var(--border-color) !important;
   color: var(--button-text-color) !important;
-  transition: background-color 0.25s ease-in-out, transform 0.25s ease-in-out;
+  border-radius: 8px;
+  padding: 12px 16px;
+  transition: all 0.25s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.action-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
 }
 
 .action-btn:hover {
-  background-color: var(--button-hover-bg-color) !important;
-  border-color: var(--border-color) !important;
+  background: var(--primary-gradient) !important;
+  border-color: var(--primary-color) !important;
+  color: white !important;
   transform: scale(1.05);
+  box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3), 0 4px 6px -2px rgba(59, 130, 246, 0.1);
 }
 
-.action-btn .el-icon { font-size: 1.2em; }
+.action-btn:hover::before {
+  left: 100%;
+}
+
+.action-btn:active {
+  transform: scale(0.98);
+  box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.2);
+}
+
+.action-btn .el-icon {
+  font-size: 1.2em;
+  margin-right: 8px;
+}
 
 /* --- 通用卡片头部 (标题在左，按钮在右) --- */
 .project-card-header {
@@ -245,7 +329,15 @@ html { scrollbar-width: none; -ms-overflow-style: none; }
   max-width: 450px;
 }
 
-.user-info { margin: 15px 0 30px; }
+.home-container .card-header .el-avatar {
+  box-shadow: 0 0 0 2px var(--box-shadow-color);
+  transition: all 0.3s ease;
+}
+
+.home-container .card-header .el-avatar:hover {
+  box-shadow: 0 0 0 4px var(--box-shadow-color);
+  transform: scale(1.05);
+}
 .user-info h2 { font-size: 2.2em; margin: 0; font-weight: 600; }
 .user-info p { font-size: 1.1em; color: var(--secondary-text-color); margin-top: 8px; }
 .button-group { width: 100%; }
@@ -277,35 +369,66 @@ html { scrollbar-width: none; -ms-overflow-style: none; }
   text-decoration: none;
   display: block;
   margin-bottom: 16px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  padding: 2px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) border-box;
 }
-.project-card-link{
-  background: transparent;
+
+.project-card-link {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) border-box;
+}
+
+.download-card-link {
+  background: linear-gradient(135deg, var(--secondary-color), var(--primary-color)) border-box;
+}
+
+/* 悬停效果 */
+.project-card-link:hover,
+.download-card-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.3), 0 10px 10px -5px rgba(59, 130, 246, 0.1);
+}
+
+/* 点击反馈效果 */
+.project-card-link:active,
+.download-card-link:active {
+  transform: translateY(0);
+  box-shadow: 0 5px 15px -3px rgba(59, 130, 246, 0.2), 0 4px 6px -2px rgba(59, 130, 246, 0.05);
 }
 
 .project-card {
-  background-color: var(--list-item-bg-color);
-  border-color: var(--border-color);
-  border-radius: 16px;
-  transition: background-color 0.25s ease-in-out, transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+  background: var(--list-item-bg-color);
+  border-radius: 14px;
+  transition: all 0.3s ease;
+  border: none;
+  width: 100%;
+  height: 100%;
 }
 
 .project-card:hover {
-  background-color: var(--list-item-hover-bg-color);
+  background: var(--list-item-hover-bg-color);
   transform: translateY(-4px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3), 0 4px 6px -2px rgba(59, 130, 246, 0.1);
+  border-color: transparent !important;
 }
 
 .project-card .el-card__body {
-  padding: 12px 16px;
+  padding: 20px 24px;
+  background: transparent;
 }
 
 .project-card-content {
   display: flex;
   align-items: center;
+  gap: 16px;
 }
 
 .project-details {
-  margin-left: 16px;
+  margin-left: 0;
+  flex: 1;
 }
 
 .project-details h3 {
@@ -365,6 +488,8 @@ html { scrollbar-width: none; -ms-overflow-style: none; }
   min-width: 120px; /* 设置一个最小宽度，让按钮看起来更匀称 */
   margin-right: 15px; /* 添加右边距，隔开按钮 */
   margin-bottom: 10px; /* 如果换行，提供垂直间距 */
+  position: relative;
+  overflow: hidden;
 }
 
 .project-detail-dialog .el-dialog__headerbtn .el-icon {
@@ -398,17 +523,44 @@ html { scrollbar-width: none; -ms-overflow-style: none; }
   position: fixed;
   bottom: 30px;
   right: 30px;
-  z-index: 10;
-  background-color: var(--toggle-bg-color) !important;
+  z-index: 9999;
+  background: var(--toggle-bg-color) !important;
   color: var(--toggle-icon-color) !important;
   border-color: var(--toggle-border-color) !important;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  /* 确保按钮不被其他元素影响 */
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.theme-toggle::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
 }
 
 .theme-toggle:hover {
-  background-color: var(--toggle-hover-bg-color) !important;
-  border-color: var(--toggle-hover-border-color) !important;
+  background: var(--primary-gradient) !important;
+  border-color: var(--primary-color) !important;
+  color: white !important;
   transform: scale(1.1) rotate(15deg);
+  box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3), 0 4px 6px -2px rgba(59, 130, 246, 0.1);
+}
+
+.theme-toggle:hover::before {
+  left: 100%;
+}
+
+.theme-toggle:active {
+  transform: scale(0.95) rotate(15deg);
+  box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.2);
 }
 
 
