@@ -12,11 +12,13 @@ import ThoriumWinIcon from '@/assets/image/icon/Thorium.png';
 import ClashPartyIcon from '@/assets/image/icon/clash.png';
 import ClashDevIcon from '@/assets/image/icon/clash-dev.png';
 import javaIcon from '@/assets/image/icon/java.webp';
+import PowerToysIcon from '@/components/icons/PowerToys.vue';
 </script>
 
 <template>
   <div class="Download-container">
     <div class="info-card Download-card">
+
       <div class="project-card-header">
         <h1>下载</h1>
         <router-link to="/">
@@ -24,9 +26,10 @@ import javaIcon from '@/assets/image/icon/java.webp';
         </router-link>
       </div>
       <el-divider />
+
       <div class="project-list-container">
         <!-- Visual Studio 2022 -->
-        <a href="https://aka.ms/vs/17/release/vs_community.exe" class="download-card-link" download>
+        <a href="https://aka.ms/vs/17/release/vs_community.exe" target="_blank" class="download-card-link" download>
           <el-card class="project-card" shadow="hover">
             <div class="project-card-content">
               <div class="icon-container">
@@ -41,7 +44,7 @@ import javaIcon from '@/assets/image/icon/java.webp';
         </a>
 
         <!-- launcher for napcat&yunzai -->
-        <a href="../assets/exe/launcher.exe" class="download-card-link" download>
+        <a href="../assets/exe/launcher.exe" target="_blank" class="download-card-link" download>
           <el-card class="project-card" shadow="hover">
             <div class="project-card-content">
               <div class="icon-container">
@@ -56,7 +59,7 @@ import javaIcon from '@/assets/image/icon/java.webp';
         </a>
 
         <!-- SteamAccountManager -->
-        <a href="src/assets/exe/SteamAccountManager.exe" class="download-card-link" download>
+        <a href="src/assets/exe/SteamAccountManager.exe" target="_blank" class="download-card-link" download>
           <el-card class="project-card" shadow="hover">
             <div class="project-card-content">
               <div class="icon-container">
@@ -71,7 +74,7 @@ import javaIcon from '@/assets/image/icon/java.webp';
         </a>
 
         <!-- Everything -->
-        <a href="https://www.voidtools.com/zh-cn/downloads/" class="download-card-link">
+        <a href="https://www.voidtools.com/zh-cn/downloads/" target="_blank" class="download-card-link">
           <el-card class="project-card" shadow="hover">
             <div class="project-card-content">
               <div class="icon-container">
@@ -86,7 +89,7 @@ import javaIcon from '@/assets/image/icon/java.webp';
         </a>
 
         <!-- ExplorerBlurMica -->
-        <a href="https://github.com/Maplespe/ExplorerBlurMica/releases" class="download-card-link">
+        <a href="https://github.com/Maplespe/ExplorerBlurMica/releases/latest" target="_blank" class="download-card-link">
           <el-card class="project-card" shadow="hover">
             <div class="project-card-content">
               <div class="icon-container">
@@ -101,7 +104,7 @@ import javaIcon from '@/assets/image/icon/java.webp';
         </a>
 
         <!-- JetBrains IDEA 其他版本 -->
-        <a href="https://www.jetbrains.com/zh-cn/idea/download/other.html" class="download-card-link">
+        <a href="https://www.jetbrains.com/zh-cn/idea/download/other.html" target="_blank" class="download-card-link">
           <el-card class="project-card" shadow="hover">
             <div class="project-card-content">
               <div class="icon-container">
@@ -116,7 +119,7 @@ import javaIcon from '@/assets/image/icon/java.webp';
         </a>
 
         <!-- MSYS2 -->
-        <a href="https://www.msys2.org/#installation" class="download-card-link">
+        <a href="https://www.msys2.org/#installation" target="_blank" class="download-card-link">
           <el-card class="project-card" shadow="hover">
             <div class="project-card-content">
               <div class="icon-container">
@@ -131,7 +134,7 @@ import javaIcon from '@/assets/image/icon/java.webp';
         </a>
 
         <!-- Microsoft 通用运行时库 -->
-        <a href="https://github.com/noob-xiaoyu/Download_site/raw/refs/heads/main/Microsoft%20common%20runtime%20libraries/Microsoft%20common%20runtime%20libraries25-12-3.exe" class="download-card-link">
+        <a href="https://github.com/noob-xiaoyu/Download_site/raw/refs/heads/main/Microsoft%20common%20runtime%20libraries/Microsoft%20common%20runtime%20libraries25-12-3.exe" target="_blank" class="download-card-link">
           <el-card class="project-card" shadow="hover">
             <div class="project-card-content">
               <div class="icon-container">
@@ -146,7 +149,7 @@ import javaIcon from '@/assets/image/icon/java.webp';
         </a>
 
         <!-- NeatDM 多线程下载器 -->
-        <a href="https://github.com/noob-xiaoyu/Download_site/blob/main/Multi-threaded%20downloader/NeatDM_v1.3_Chs.exe" class="download-card-link">
+        <a href="https://github.com/noob-xiaoyu/Download_site/blob/main/Multi-threaded%20downloader/NeatDM_v1.3_Chs.exe" target="_blank" class="download-card-link">
           <el-card class="project-card" shadow="hover">
             <div class="project-card-content">
               <div class="icon-container">
@@ -161,7 +164,7 @@ import javaIcon from '@/assets/image/icon/java.webp';
         </a>
 
         <!-- Thorium-Win 浏览器 -->
-        <a href="https://github.com/Alex313031/Thorium-Win/releases" class="download-card-link">
+        <a href="https://github.com/Alex313031/Thorium-Win/releases/latest" target="_blank" class="download-card-link">
           <el-card class="project-card" shadow="hover">
             <div class="project-card-content">
               <div class="icon-container">
@@ -175,12 +178,27 @@ import javaIcon from '@/assets/image/icon/java.webp';
           </el-card>
         </a>
 
+        <!-- PowerToys -->
+        <a href="https://github.com/microsoft/PowerToys/releases/latest" target="_blank" class="download-card-link">
+          <el-card class="project-card" shadow="hover">
+            <div class="project-card-content">
+              <div class="icon-container">
+                <component :is="PowerToysIcon" class="custom-svg-icon" />
+              </div>
+              <div class="project-details">
+                <h3>PowerToys</h3>
+                <p>Windows 系统工具集，提供额外的功能和增强的用户体验</p>
+              </div>
+            </div>
+          </el-card>
+        </a>
+
         <!-- Clash Party -->
         <el-card class="project-card" shadow="hover">
           <div class="download-card-link">
             <div class="project-card-content">
               <!-- Clash Party -->
-              <a href="https://github.com/mihomo-party-org/clash-party/releases" style="text-decoration: none">
+              <a href="https://github.com/Maplespe/ExplorerBlurMica/releases/latest" target="_blank" style="text-decoration: none">
               <el-card class="project-card" shadow="hover">
                 <div class="project-card-content">
                   <div class="icon-container">
@@ -194,7 +212,7 @@ import javaIcon from '@/assets/image/icon/java.webp';
               </el-card>
               </a>
               <!-- Clash 官网导航 -->
-              <a href="https://github.com/clashdownload/Clash" style="text-decoration: none">
+              <a href="https://github.com/clashdownload/Clash" target="_blank" style="text-decoration: none">
               <el-card class="project-card" shadow="hover">
                 <div class="project-card-content">
                   <div class="icon-container">
@@ -211,70 +229,71 @@ import javaIcon from '@/assets/image/icon/java.webp';
           </div>
         </el-card>
 
-        <ul/>
+        <el-divider/>
 
         <!-- Java -->
         <el-card class="project-card" shadow="hover">
-          <div class="download-card-link">
-            <div class="project-card-content">
-              <!-- JDK 25 -->
-              <a href="https://download.oracle.com/java/25/archive/jdk-25.0.0_windows-x64_bin.exe" style="text-decoration: none">
-                <el-card class="project-card" shadow="hover">
-                  <div class="project-card-content">
-                    <div class="icon-container">
-                      <img :src="javaIcon" alt="Java" class="custom-svg-icon" />
-                    </div>
-                    <div class="project-details">
-                      <h3>Oracle JDK 25.0.2</h3>
-                      <p>Java 开发工具包 25.0.2 稳定版</p>
-                    </div>
-                  </div>
-                </el-card>
-              </a>
-              <!-- JDK 22 -->
-              <a href="https://download.oracle.com/java/22/archive/jdk-22.0.2_windows-x64_bin.exe" style="text-decoration: none">
-                <el-card class="project-card" shadow="hover">
-                  <div class="project-card-content">
-                    <div class="icon-container">
-                      <img :src="javaIcon" alt="Java" class="custom-svg-icon" />
-                    </div>
-                    <div class="project-details">
-                      <h3>Oracle JDK 22.0.2</h3>
-                      <p>Java 开发工具包 22.0.2 稳定版</p>
-                    </div>
-                  </div>
-                </el-card>
-              </a>
-              <!-- JDK 21 -->
-              <a href="https://download.oracle.com/java/21/archive/jdk-21.0.2_windows-x64_bin.exe" style="text-decoration: none">
-                <el-card class="project-card" shadow="hover">
-                  <div class="project-card-content">
-                    <div class="icon-container">
-                      <img :src="javaIcon" alt="Java" class="custom-svg-icon" />
-                    </div>
-                    <div class="project-details">
-                      <h3>Oracle JDK 21.0.2</h3>
-                      <p>Java 开发工具包 21.0.2 稳定版</p>
-                    </div>
-                  </div>
-                </el-card>
-              </a>
-              <!-- JDK 17 -->
-              <a href="https://download.oracle.com/java/17/archive/jdk-17.0.12_windows-x64_bin.exe" style="text-decoration: none">
-                <el-card class="project-card" shadow="hover">
-                  <div class="project-card-content">
-                    <div class="icon-container">
-                      <img :src="javaIcon" alt="Java" class="custom-svg-icon" />
-                    </div>
-                    <div class="project-details">
-                      <h3>Oracle JDK 17.0.12</h3>
-                      <p>Java 开发工具包 17.0.12 稳定版</p>
-                    </div>
-                  </div>
-                </el-card>
-              </a>
+          <div style="color: var(--main-text-color); text-align: left;">
+            <h1>Java 开发工具包</h1>
+          </div>
 
-            </div>
+          <div class="java-versions-container">
+            <!-- JDK 25 -->
+            <a href="https://download.oracle.com/java/25/latest/jdk-25_windows-x64_bin.exe" target="_blank" class="download-card-link" style="text-decoration: none">
+              <el-card class="project-card" shadow="hover">
+                <div class="project-card-content">
+                  <div class="icon-container">
+                    <img :src="javaIcon" alt="Java" class="custom-svg-icon" style="width: 80px; height: 80px;"/>
+                  </div>
+                  <div class="project-details">
+                    <h3>Oracle JDK 25.0.2</h3>
+                    <p>Java 开发工具包 25.0.2 稳定版</p>
+                  </div>
+                </div>
+              </el-card>
+            </a>
+            <!-- JDK 22 -->
+            <a href="https://download.oracle.com/java/22/archive/jdk-22.0.2_windows-x64_bin.exe" target="_blank" class="download-card-link" style="text-decoration: none">
+              <el-card class="project-card" shadow="hover">
+                <div class="project-card-content">
+                  <div class="icon-container">
+                    <img :src="javaIcon" alt="Java" class="custom-svg-icon" style="width: 80px; height: 80px;"/>
+                  </div>
+                  <div class="project-details">
+                    <h3>Oracle JDK 22.0.2</h3>
+                    <p>Java 开发工具包 22.0.2 稳定版</p>
+                  </div>
+                </div>
+              </el-card>
+            </a>
+            <!-- JDK 21 -->
+            <a href="https://download.oracle.com/java/21/archive/jdk-21.0.2_windows-x64_bin.exe" target="_blank" class="download-card-link" style="text-decoration: none">
+              <el-card class="project-card" shadow="hover">
+                <div class="project-card-content">
+                  <div class="icon-container">
+                    <img :src="javaIcon" alt="Java" class="custom-svg-icon" style="width: 80px; height: 80px;"/>
+                  </div>
+                  <div class="project-details">
+                    <h3>Oracle JDK 21.0.2</h3>
+                    <p>Java 开发工具包 21.0.2 稳定版</p>
+                  </div>
+                </div>
+              </el-card>
+            </a>
+            <!-- JDK 17 -->
+            <a href="https://download.oracle.com/java/17/archive/jdk-17.0.12_windows-x64_bin.exe" target="_blank" class="download-card-link" style="text-decoration: none">
+              <el-card class="project-card" shadow="hover">
+                <div class="project-card-content">
+                  <div class="icon-container">
+                    <img :src="javaIcon" alt="Java" class="custom-svg-icon" style="width: 80px; height: 80px;"/>
+                  </div>
+                  <div class="project-details">
+                    <h3>Oracle JDK 17.0.12</h3>
+                    <p>Java 开发工具包 17.0.12 稳定版</p>
+                  </div>
+                </div>
+              </el-card>
+            </a>
           </div>
         </el-card>
 

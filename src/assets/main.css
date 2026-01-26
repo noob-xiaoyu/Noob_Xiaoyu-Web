@@ -377,6 +377,16 @@ html { scrollbar-width: none; -ms-overflow-style: none; }
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) border-box;
 }
 
+/* Java 版本容器 */
+.java-versions-container {
+  margin-top: 16px;
+}
+
+.java-versions-container .download-card-link {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
 .project-card-link {
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) border-box;
 }
