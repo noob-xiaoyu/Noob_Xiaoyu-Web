@@ -68,6 +68,17 @@ const projectList = ref([
     },
     to: 'projects/ImageBinaryConverter',
   },
+  {
+    id: 'ImGui-Main',
+    icon: imguiIcon,
+    title: 'ImGui-Main',
+    shortDescription:
+      '基于 Dear ImGui 的 C++ 图形界面应用程序框架，使用 OpenGL 作为渲染后端，提供完整的 UI 控件库和渲染功能。',
+    links: {
+      github: 'https://github.com/noob-xiaoyu/ImGui-Main',
+    },
+    to: 'projects/ImGui-Main',
+  },
   // {
   //   id: '',
   //   icon: '',

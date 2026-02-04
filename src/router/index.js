@@ -60,6 +60,11 @@ const router = createRouter({
       name: '/ImageBinaryConverter',
       component: () => import('../views/projects/ImageBinaryConverter.vue')
     },
+    {
+      path: '/projects/ImGui-Main',
+      name: '/ImGui-Main',
+      component: () => import('../views/projects/ImGui-Main.vue')
+    }
   ]
 })
 
