@@ -41,7 +41,7 @@ function initWaifu() {
     const month = today.getMonth() + 1 // 月份从0开始，需要加1
     const day = today.getDate()
     const isOddDay = day % 2 === 1
-    const modelId = isOddDay ? '22' : '33'
+    const modelId = isOddDay ? '33' : '22'
     console.log('日期信息:', { month, day, isOddDay, modelId })
 
     // 构建模型路径的基础URL
@@ -95,7 +95,7 @@ function initWaifu() {
     // 构建模型路径
     const today = new Date()
     const day = today.getDate()
-    const modelId = day % 2 === 1 ? '22' : '33'
+    const modelId = day % 2 === 1 ? '33' : '22'
     const baseUrl = 'https://raw.githubusercontent.com/imuncle/live2d/master/model'
     const modelPath = `${baseUrl}/${modelId}/model.default.json`
 
