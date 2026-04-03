@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import backIcon from '@/components/icons/back-icon.vue'
 import GithubIcon from '@/components/icons/GithubIcon.vue'
-const techStack = ref(['C#'])
+const techStack = ref(['C++','WebView2','VUE','Vite'])
 const links = ref({
   github: 'https://github.com/noob-xiaoyu/SteamAccountManager',
 })
@@ -43,24 +43,24 @@ const links = ref({
           <ul>
             <p>支持通过逗号或特定分隔符（`----`）批量添加账号，兼容多种格式。</p>
           </ul>
-          <h2>5,API 集成</h2>
-          <ul>
-            <p>通过 Steam Web API 批量更新所有账号的最新昵称和封禁状态。</p>
-            <p>智能填充功能：当您粘贴包含 API Key 的文本时，程序会自动提取出 32 位的纯净 Key。</p>
-          </ul>
-          <h2>6,数据持久化</h2>
-          <ul>
-            <p>所有账号信息和应用设置（如 API Key）都会自动保存在程序根目录的 `.json` 文件中。</p>
+          <!-- <h2>5,API 集成</h2>
             <ul>
-              <li>
-                <p>自动保存:</p>
-                <ul>
-                  <p>关闭程序时，所有更改都会自动静默保存，无需手动操作。</p>
-                </ul>
-              </li>
+              <p>通过 Steam Web API 批量更新所有账号的最新昵称和封禁状态。</p>
+              <p>智能填充功能：当您粘贴包含 API Key 的文本时，程序会自动提取出 32 位的纯净 Key。</p>
+            </ul> -->
+          <h2>5,数据持久化</h2>
+            <ul>
+              <p>所有账号信息都会自动保存在程序根目录的 `.json` 文件中。</p>
+              <ul>
+                <li>
+                  <p>自动保存:</p>
+                  <ul>
+                    <p>关闭程序时，所有更改都会自动静默保存，无需手动操作。</p>
+                  </ul>
+                </li>
+              </ul>
             </ul>
-          </ul>
-          <h2>7,便捷的交互</h2>
+          <h2>6,便捷的交互</h2>
           <ul>
             <p>支持通过顶部按钮或右键上下文菜单对账号进行更改、登录、删除等操作。</p>
             <p>点击昵称可直接在浏览器中打开对应的 Steam 社区个人资料页面。</p>
@@ -72,7 +72,7 @@ const links = ref({
           <ul>
             <p>
               1. 从<a
-                href="https://github.com/noob-xiaoyu/SteamAccountManager/releases"
+                href="https://github.com/noob-xiaoyu/SteamAccountManager/releases/latest"
                 target="_blank"
                 style="text-decoration: none"
                 >Releases</a
@@ -81,7 +81,7 @@ const links = ref({
             </p>
             <p>
               2. 运行
-              <router-link to="/download" style="text-decoration: none">
+              <router-link to="https://github.com/noob-xiaoyu/SteamAccountManager/releases/latest" style="text-decoration: none">
                 SteamAccountManager.exe
               </router-link>
               。

@@ -69,8 +69,8 @@ import gmailIcon from '@/components/icons/gmail-icon.vue'
                   target="_blank"
                   rel="noopener noreferrer"
                   style="text-decoration: none"
-                  >noob-xiaoyu</el-button
-                >
+                  >noob-xiaoyu
+                </el-button>
               </el-col>
             </el-row>
           </div>
